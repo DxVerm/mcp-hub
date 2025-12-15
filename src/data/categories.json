@@ -1,0 +1,86 @@
+[
+  {
+    "id": "databases",
+    "name": "Databases",
+    "description": "Database integrations including PostgreSQL, MySQL, SQLite, MongoDB, and more",
+    "icon": "Database",
+    "color": "blue"
+  },
+  {
+    "id": "ai-ml",
+    "name": "AI & ML",
+    "description": "AI tools, embeddings, vector databases, and LLM integrations",
+    "icon": "Brain",
+    "color": "purple"
+  },
+  {
+    "id": "development",
+    "name": "Development",
+    "description": "Git, GitHub, code analysis, and development tools",
+    "icon": "Code",
+    "color": "green"
+  },
+  {
+    "id": "productivity",
+    "name": "Productivity",
+    "description": "Task management, notes, calendars, and workflow tools",
+    "icon": "CheckSquare",
+    "color": "yellow"
+  },
+  {
+    "id": "communication",
+    "name": "Communication",
+    "description": "Slack, Discord, email, and messaging integrations",
+    "icon": "MessageSquare",
+    "color": "pink"
+  },
+  {
+    "id": "filesystem",
+    "name": "File Systems",
+    "description": "Local file operations, cloud storage, and file management",
+    "icon": "FolderOpen",
+    "color": "orange"
+  },
+  {
+    "id": "web-browser",
+    "name": "Web & Browser",
+    "description": "Puppeteer, Playwright, web scraping, and browser automation",
+    "icon": "Globe",
+    "color": "cyan"
+  },
+  {
+    "id": "cloud",
+    "name": "Cloud Services",
+    "description": "AWS, GCP, Azure, Vercel, Netlify, and cloud deployments",
+    "icon": "Cloud",
+    "color": "sky"
+  },
+  {
+    "id": "monitoring",
+    "name": "Monitoring",
+    "description": "Logs, metrics, observability, and system monitoring",
+    "icon": "Activity",
+    "color": "red"
+  },
+  {
+    "id": "security",
+    "name": "Security",
+    "description": "Authentication, secrets management, and security scanning",
+    "icon": "Shield",
+    "color": "slate"
+  },
+  {
+    "id": "data-processing",
+    "name": "Data Processing",
+    "description": "ETL, data transformation, and pipeline tools",
+    "icon": "Workflow",
+    "color": "indigo"
+  },
+  {
+    "id": "other",
+    "name": "Other",
+    "description": "Miscellaneous MCP servers and utilities",
+    "icon": "Package",
+    "color": "gray"
+  }
+]

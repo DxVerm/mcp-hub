@@ -1,0 +1,324 @@
+[
+  {
+    "id": "filesystem",
+    "slug": "filesystem",
+    "name": "Filesystem",
+    "description": "Secure file operations with configurable access controls",
+    "longDescription": "The official Filesystem MCP server provides secure file operations including reading, writing, searching, and managing files and directories. Features configurable access controls to restrict operations to specific directories.",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/directory"],
+    "category": "filesystem",
+    "tags": ["files", "directories", "read", "write", "search"],
+    "source": "official",
+    "verified": true,
+    "repository": "https://github.com/modelcontextprotocol/servers",
+    "documentation": "https://modelcontextprotocol.io/docs/servers/filesystem",
+    "author": "Anthropic",
+    "version": "latest",
+    "install": {
+      "npm": "npm install @modelcontextprotocol/server-filesystem",
+      "npx": "npx -y @modelcontextprotocol/server-filesystem"
+    },
+    "claudeConfig": {
+      "mcpServers": {
+        "filesystem": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/directory"]
+        }
+      }
+    },
+    "tools": [
+      {"name": "read_file", "description": "Read complete contents of a file"},
+      {"name": "write_file", "description": "Create or overwrite a file"},
+      {"name": "list_directory", "description": "List directory contents with metadata"},
+      {"name": "search_files", "description": "Recursively search for files by pattern"}
+    ],
+    "featured": true
+  },
+  {
+    "id": "memory",
+    "slug": "memory",
+    "name": "Memory",
+    "description": "Knowledge graph-based persistent memory system",
+    "longDescription": "Create and manage a persistent knowledge graph that stores entities and their relationships. Perfect for building context that persists across conversations.",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-memory"],
+    "category": "ai",
+    "tags": ["memory", "knowledge-graph", "persistence", "entities"],
+    "source": "official",
+    "verified": true,
+    "repository": "https://github.com/modelcontextprotocol/servers",
+    "documentation": "https://modelcontextprotocol.io/docs/servers/memory",
+    "author": "Anthropic",
+    "version": "latest",
+    "install": {
+      "npm": "npm install @modelcontextprotocol/server-memory",
+      "npx": "npx -y @modelcontextprotocol/server-memory"
+    },
+    "claudeConfig": {
+      "mcpServers": {
+        "memory": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-memory"]
+        }
+      }
+    },
+    "tools": [
+      {"name": "create_entities", "description": "Create multiple new entities in the knowledge graph"},
+      {"name": "create_relations", "description": "Create relations between entities"},
+      {"name": "search_nodes", "description": "Search for nodes based on query"},
+      {"name": "read_graph", "description": "Read the entire knowledge graph"}
+    ],
+    "featured": true
+  },
+  {
+    "id": "github",
+    "slug": "github",
+    "name": "GitHub",
+    "description": "Repository management, file operations, and GitHub API integration",
+    "longDescription": "Comprehensive GitHub integration for repository management, file operations, issues, pull requests, and more. Requires a GitHub personal access token.",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-github"],
+    "env": {
+      "GITHUB_PERSONAL_ACCESS_TOKEN": {
+        "description": "GitHub Personal Access Token",
+        "required": true
+      }
+    },
+    "category": "development",
+    "tags": ["github", "git", "repositories", "issues", "pull-requests"],
+    "source": "official",
+    "verified": true,
+    "repository": "https://github.com/modelcontextprotocol/servers",
+    "documentation": "https://modelcontextprotocol.io/docs/servers/github",
+    "author": "Anthropic",
+    "version": "latest",
+    "install": {
+      "npm": "npm install @modelcontextprotocol/server-github",
+      "npx": "npx -y @modelcontextprotocol/server-github"
+    },
+    "claudeConfig": {
+      "mcpServers": {
+        "github": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-github"],
+          "env": {
+            "GITHUB_PERSONAL_ACCESS_TOKEN": "your-token-here"
+          }
+        }
+      }
+    },
+    "tools": [
+      {"name": "create_repository", "description": "Create a new GitHub repository"},
+      {"name": "search_repositories", "description": "Search for repositories"},
+      {"name": "create_issue", "description": "Create a new issue"},
+      {"name": "create_pull_request", "description": "Create a new pull request"}
+    ],
+    "featured": true
+  },
+  {
+    "id": "postgres",
+    "slug": "postgres",
+    "name": "PostgreSQL",
+    "description": "Read-only PostgreSQL database access with schema inspection",
+    "longDescription": "Connect to PostgreSQL databases with read-only access. Query data and inspect database schemas safely.",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/mydb"],
+    "env": {
+      "DATABASE_URL": {
+        "description": "PostgreSQL connection string",
+        "required": true
+      }
+    },
+    "category": "database",
+    "tags": ["postgresql", "database", "sql", "query"],
+    "source": "official",
+    "verified": true,
+    "repository": "https://github.com/modelcontextprotocol/servers",
+    "author": "Anthropic",
+    "version": "latest",
+    "install": {
+      "npm": "npm install @modelcontextprotocol/server-postgres",
+      "npx": "npx -y @modelcontextprotocol/server-postgres"
+    },
+    "claudeConfig": {
+      "mcpServers": {
+        "postgres": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/mydb"]
+        }
+      }
+    },
+    "tools": [
+      {"name": "query", "description": "Execute read-only SQL queries"},
+      {"name": "list_tables", "description": "List all tables in the database"},
+      {"name": "describe_table", "description": "Get schema information for a table"}
+    ],
+    "featured": false
+  },
+  {
+    "id": "brave-search",
+    "slug": "brave-search",
+    "name": "Brave Search",
+    "description": "Web and local search using Brave's Search API",
+    "longDescription": "Search the web and local content using Brave Search API. Get high-quality search results with privacy-focused infrastructure.",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+    "env": {
+      "BRAVE_API_KEY": {
+        "description": "Brave Search API key",
+        "required": true
+      }
+    },
+    "category": "web",
+    "tags": ["search", "web", "brave", "api"],
+    "source": "official",
+    "verified": true,
+    "repository": "https://github.com/modelcontextprotocol/servers",
+    "author": "Anthropic",
+    "version": "latest",
+    "install": {
+      "npm": "npm install @modelcontextprotocol/server-brave-search",
+      "npx": "npx -y @modelcontextprotocol/server-brave-search"
+    },
+    "claudeConfig": {
+      "mcpServers": {
+        "brave-search": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+          "env": {
+            "BRAVE_API_KEY": "your-api-key-here"
+          }
+        }
+      }
+    },
+    "tools": [
+      {"name": "brave_web_search", "description": "Search the web using Brave Search"},
+      {"name": "brave_local_search", "description": "Search for local businesses and places"}
+    ],
+    "featured": false
+  },
+  {
+    "id": "fetch",
+    "slug": "fetch",
+    "name": "Fetch",
+    "description": "Web content fetching and conversion to various formats",
+    "longDescription": "Fetch web pages and convert them to markdown, HTML, or plain text. Useful for reading web content and documentation.",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-fetch"],
+    "category": "web",
+    "tags": ["fetch", "web", "scraping", "markdown"],
+    "source": "official",
+    "verified": true,
+    "repository": "https://github.com/modelcontextprotocol/servers",
+    "author": "Anthropic",
+    "version": "latest",
+    "install": {
+      "npm": "npm install @modelcontextprotocol/server-fetch",
+      "npx": "npx -y @modelcontextprotocol/server-fetch"
+    },
+    "claudeConfig": {
+      "mcpServers": {
+        "fetch": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-fetch"]
+        }
+      }
+    },
+    "tools": [
+      {"name": "fetch", "description": "Fetch a URL and convert to markdown or other formats"}
+    ],
+    "featured": false
+  },
+  {
+    "id": "slack",
+    "slug": "slack",
+    "name": "Slack",
+    "description": "Slack workspace integration for messaging and channel management",
+    "longDescription": "Connect to Slack workspaces to send messages, manage channels, and interact with your team.",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-slack"],
+    "env": {
+      "SLACK_BOT_TOKEN": {
+        "description": "Slack Bot Token (xoxb-...)",
+        "required": true
+      },
+      "SLACK_TEAM_ID": {
+        "description": "Slack Team/Workspace ID",
+        "required": true
+      }
+    },
+    "category": "communication",
+    "tags": ["slack", "messaging", "team", "communication"],
+    "source": "official",
+    "verified": true,
+    "repository": "https://github.com/modelcontextprotocol/servers",
+    "author": "Anthropic",
+    "version": "latest",
+    "install": {
+      "npm": "npm install @modelcontextprotocol/server-slack",
+      "npx": "npx -y @modelcontextprotocol/server-slack"
+    },
+    "claudeConfig": {
+      "mcpServers": {
+        "slack": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-slack"],
+          "env": {
+            "SLACK_BOT_TOKEN": "xoxb-your-token",
+            "SLACK_TEAM_ID": "T0123456789"
+          }
+        }
+      }
+    },
+    "tools": [
+      {"name": "send_message", "description": "Send a message to a channel"},
+      {"name": "list_channels", "description": "List available channels"},
+      {"name": "get_channel_history", "description": "Get recent messages from a channel"}
+    ],
+    "featured": false
+  },
+  {
+    "id": "puppeteer",
+    "slug": "puppeteer",
+    "name": "Puppeteer",
+    "description": "Browser automation for web scraping and testing",
+    "longDescription": "Control headless Chrome/Chromium browsers for web scraping, testing, and automation tasks.",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+    "category": "web",
+    "tags": ["browser", "automation", "scraping", "testing"],
+    "source": "official",
+    "verified": true,
+    "repository": "https://github.com/modelcontextprotocol/servers",
+    "author": "Anthropic",
+    "version": "latest",
+    "install": {
+      "npm": "npm install @modelcontextprotocol/server-puppeteer",
+      "npx": "npx -y @modelcontextprotocol/server-puppeteer"
+    },
+    "claudeConfig": {
+      "mcpServers": {
+        "puppeteer": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+        }
+      }
+    },
+    "tools": [
+      {"name": "navigate", "description": "Navigate to a URL"},
+      {"name": "screenshot", "description": "Take a screenshot of the page"},
+      {"name": "click", "description": "Click an element on the page"},
+      {"name": "evaluate", "description": "Execute JavaScript in the browser"}
+    ],
+    "featured": false
+  }
+]
